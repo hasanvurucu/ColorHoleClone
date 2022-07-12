@@ -85,8 +85,8 @@ public class HoleMovement : MonoBehaviour
 
 			holePos = holeCenter.position;
 
-			holePos.x = holeInitialPos.x + (mouseCurrent.x - mouseInitials.x) * moveSpeed;
-			holePos.z = holeInitialPos.z + (mouseCurrent.y - mouseInitials.y) * moveSpeed;
+			holePos.x = holeInitialPos.x + (mouseCurrent.x - mouseInitials.x) * (moveSpeed/10);
+			holePos.z = holeInitialPos.z + (mouseCurrent.y - mouseInitials.y) * (moveSpeed/10);
 
 			holePos.x = Mathf.Clamp(holePos.x, -0.75f, 0.75f);
 			holePos.z = Mathf.Clamp(holePos.z, -1.25f, 1.25f);
